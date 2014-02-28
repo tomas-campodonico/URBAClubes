@@ -150,6 +150,10 @@ calcRoute = function() {
 					$('.route-info').css('visibility', 'visible');
 					$('.route-info__distance').html(result.routes[0].legs[0].distance.text);
 					$('.route-info__duration').html(result.routes[0].legs[0].duration.text);
+					for (var s = 0; s < result.routes[0].legs[0].steps.length; s++) {
+						$('.route-info').append(result.routes[0].legs[0].steps[s].instructions);
+						$('.route-info').append('<br>');
+					}
 				} else {
 					$('.route-info').css('visibility', 'hidden');
 					$('.route-info__distance').html('');

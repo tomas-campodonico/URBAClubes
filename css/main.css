@@ -28,6 +28,9 @@ main > div {
 
 .route-info {
 	visibility: hidden;
+}
+
+.route-info__distance, .route-info__duration {
 	font-weight: bold;
 }
 
