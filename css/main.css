@@ -1,0 +1,37 @@
+/* Global styles */
+html { 
+	height: 100%;
+}
+      
+body {
+	height: 100%;
+	padding: 4em;
+	background-color: #B2B0B0;
+}
+
+main {
+	height: 100%;
+}
+
+main > div {
+	display: inline-block;
+	height: 75%;
+}
+
+/* Styling the map-canvas */
+#map-canvas {
+	margin-top: 7px;
+	height: 60%;
+	width: 100%;
+	border: solid 1px;
+}
+
+.route-info {
+	visibility: hidden;
+	font-weight: bold;
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 400px){
+
+}

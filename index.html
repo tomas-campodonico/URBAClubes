@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Direcciones de los clubes de la URBA">
+	<meta name="author" content="Tomas Campodonico">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.css" rel="stylesheet"	type="text/css"/>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet"	type="text/css"/>
+	<link href="css/main.css" rel="stylesheet"	type="text/css"/>
+
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="img/favicon.png">
+	
+	<title>Como llegar - URBA</title>
+</head>
+<body>
+	<!-- Header -->
+	<header>
+	</header>
+
+	<!-- Container -->
+	<main class="container row">
+		<div class="span5 pagination-centered">
+			<img id="urba_logo" src="img/urba-pc.png">
+			<form>
+				<label for="select-club">Seleccion&aacute; el club destino: </label>
+				<select id="select-club" name="select-club"><option>Eleg&iacute; un destino...</option></select>
+			</form>
+		</div>
+		<div class="span6">
+			<div id="map-canvas"></div>
+			<div class="route-info">
+				Distancia: <span class="route-info__distance"></span><br>
+				Tiempo estimado: <span class="route-info__duration"></span>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer class="navbar-wrapper">
+	</footer>
+
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY&sensor=false"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+
+</body>
+</html>
