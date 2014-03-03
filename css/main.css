@@ -28,6 +28,12 @@ main > div {
 	font-weight: bold;
 }
 
+.btn {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 220px;
+}
+
 /* Styles for mobile */
 @media screen and (max-width: 400px){
 
