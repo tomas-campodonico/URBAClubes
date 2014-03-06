@@ -44,4 +44,9 @@ main > div {
 		border: solid 1px;
 	}
 
+	#urba_logo {
+		width: 200px;
+		height: 250px;
+	}
+
 }

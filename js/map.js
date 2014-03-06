@@ -60,17 +60,23 @@
 					waypoints: clubes[endClub].waypoints || []
 				});
 			} else {
-				dfd = _getCurrentPositionDeferred();
-				$.when(dfd).done(function(pos) {
-					_sendRequest({
-						origin: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-						destination: new google.maps.LatLng(clubes[endClub].latitud, clubes[endClub].longitud),
-						travelMode: google.maps.TravelMode.DRIVING,
-						waypoints: clubes[endClub].waypoints || []
+				if (navigator.geolocation) {
+					dfd = _getCurrentPositionDeferred();
+					$.when(dfd).done(function(pos) {
+						_sendRequest({
+							origin: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+							destination: new google.maps.LatLng(clubes[endClub].latitud, clubes[endClub].longitud),
+							travelMode: google.maps.TravelMode.DRIVING,
+							waypoints: clubes[endClub].waypoints || []
+						});
 					});
-				});
+				} else {
+			    alert('Al parecer la funcionalidad de Geolocalizacion, necesaria por la aplicacion, no está disponible en su navegador.');
+			  }
 			}
 		}
+
+		return false;
 	};
 
 	/*
