@@ -36,8 +36,9 @@ main > div {
 
 div.show-route-options {
 	cursor: pointer;
-	margin: 0 80px 20px 80px;
+	margin-bottom: 20px;
 }
+
 
 div.show-route-options div.pointerDown {
 	display: inline-block;
@@ -69,7 +70,6 @@ div.show-route-options div.pointerUp {
 
 .route-options {
 	display: none;
-	text-align: left;
 }
 
 /* Styles for mobile */

@@ -15,6 +15,7 @@
 			center: new google.maps.LatLng(-34.840013, -58.265991)
 		});
 		directionsDisplay.setMap(map);
+		directionsDisplay.setPanel($('.route-info__instructions').get(0));
 
 		_initializeDropdownsValues();
 		$('#get-route').click(calcRoute);
@@ -65,7 +66,8 @@
 					origin: new google.maps.LatLng(clubes[start].latitud, clubes[start].longitud),
 					destination: new google.maps.LatLng(clubes[endClub].latitud, clubes[endClub].longitud),
 					travelMode: google.maps.TravelMode.DRIVING,
-					waypoints: clubes[endClub].waypoints || []
+					waypoints: clubes[endClub].waypoints || [],
+					avoidTolls: $('#avoid-tolls-option').prop('checked')
 				});
 			} else {
 				if (navigator.geolocation) {
@@ -75,7 +77,8 @@
 							origin: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
 							destination: new google.maps.LatLng(clubes[endClub].latitud, clubes[endClub].longitud),
 							travelMode: google.maps.TravelMode.DRIVING,
-							waypoints: clubes[endClub].waypoints || []
+							waypoints: clubes[endClub].waypoints || [],
+							avoidTolls: $('#avoid-tolls-option').prop('checked')
 						});
 					});
 				} else {
@@ -84,6 +87,7 @@
 			}
 		}
 
+		$(window).scrollTop($('#map-canvas').offset().top);
 		return false;
 	};
 
@@ -222,11 +226,6 @@
 			$('.route-info').css('visibility', 'visible');
 			$('.route-info__distance').html(result.routes[0].legs[0].distance.text);
 			$('.route-info__duration').html(result.routes[0].legs[0].duration.text);
-			$('.route-info__instructions').html('');
-			for (var s = 0; s < result.routes[0].legs[0].steps.length; s++) {
-				$('.route-info__instructions').append(result.routes[0].legs[0].steps[s].instructions);
-				$('.route-info__instructions').append('<br>');
-			}
 		} else {
 			$('.route-info').css('visibility', 'hidden');
 			$('.route-info__distance').html('');
