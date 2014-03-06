@@ -17,7 +17,15 @@
 		directionsDisplay.setMap(map);
 
 		_initializeDropdownsValues();
-		$('#get-route').click(calcRoute);  
+		$('#get-route').click(calcRoute);
+		$('.show-route-options').click(function(ev){
+			if (ev.target === ev.currentTarget || $(ev.target).hasClass('arrow')) {
+				$('.route-options').toggle();
+				$(ev.currentTarget).find('.arrow')
+				  .toggleClass('pointerDown')
+				  .toggleClass('pointerUp');
+				}
+		});
 	});
 
 	/*

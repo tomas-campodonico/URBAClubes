@@ -34,6 +34,44 @@ main > div {
 	width: 220px;
 }
 
+div.show-route-options {
+	cursor: pointer;
+	margin: 0 80px 20px 80px;
+}
+
+div.show-route-options div.pointerDown {
+	display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: solid #333;
+  border-width: 3px 3px 0 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 5px 0 0 8px;
+}
+
+div.show-route-options div.pointerUp {
+	display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: solid #333;
+  border-width: 3px 3px 0 0;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  margin: 5px 0 0 5px;
+}
+
+.route-options {
+	display: none;
+	text-align: left;
+}
+
 /* Styles for mobile */
 @media screen and (max-width: 400px){
 
