@@ -32,14 +32,6 @@ module.exports = function(grunt) {
           'dist/urba-pc.png': 'img/urba-pc.png'
         }
       }
-    },
-
-    cssmin: {
-      combine: {
-        files: {
-          'dist/main.min.css': ['css/*.css']
-        }
-      }
     }
   });
 
@@ -51,6 +43,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('imagemin', ['imagemin']);
-  grunt.registerTask('build', ['concat', 'uglify', 'cssmin']);
+  grunt.registerTask('build', ['concat', 'uglify']);
 
 };
