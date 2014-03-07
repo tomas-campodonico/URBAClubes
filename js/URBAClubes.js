@@ -207,9 +207,9 @@
 		NProgress.start();
 		directionsService.route(request, function(result, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
-				NProgress.done();
 				_showResults(result);
 				directionsDisplay.setDirections(result);
+				NProgress.done();
 			}
 		});
 	};
