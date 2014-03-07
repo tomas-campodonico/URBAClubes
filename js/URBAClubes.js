@@ -27,6 +27,13 @@
 				  .toggleClass('pointerUp');
 				}
 		});
+
+		//Configure Nprogress
+		NProgress.configure({
+			ease: 'ease',
+			speed: 500,
+			template: $('.progress-bar')
+		});
 	});
 
 	/*
@@ -197,8 +204,10 @@
 	* @method _sendRequest
 	*/
 	_sendRequest = function(request) {
+		NProgress.start();
 		directionsService.route(request, function(result, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
+				NProgress.done();
 				_showResults(result);
 				directionsDisplay.setDirections(result);
 			}
