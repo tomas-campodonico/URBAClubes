@@ -110,6 +110,8 @@
 		clubes = {};
 		clubes['Albatros'] = new Club('Albatros Rugby Club', 'Calle 135 y 515 - La Plata', -34.91339, -58.016999);
 		clubes['Areco'] = new Club('Areco Rugby Club', 'Ruta Nacional Nº 8 Km. 110,5 y Provincial Nº 41 de San Antonio de Areco (CP 2760). Pcia. de Buenos Aires', -34.259145, -59.451434);
+		clubes['Atletico del Rosario'] = new Club('Club Atletico del Rosario', 'Pasaje Gould Nº 865 Rosario - Pcia. de Santa Fe', -32.941006, -60.668336);
+		//clubes['Atletico del Rosario Anexo'] = new Club('Anexo del Club Atletico del Rosario', 'Av. Pte. Juan Domingo Perón Nº 8300, Rosario - Pcia. de Santa Fe', );
 		clubes['CAR'] = new Club('Club Argentino de Rugby', 'Altura Kilómetro 43 ½ de la Ruta Nacional Nº2', -34.922797, -58.165532);
 		clubes['Lanus'] = new Club('Asociacion Lanus Rugby Club', 'Gral. Ferré y Almeyda, Lanús Este - Pcia. de Buenos Aires', -34.718407, -58.388347);
 		clubes['Alumni'] = new Club('Asociacion Alumni', 'Directorio 1155, Tortuguitas', -34.458959,-58.735469);
@@ -126,7 +128,9 @@
 		clubes['Ciudad de Campana'] = new Club('Ciudad de Campana', 'Chiclana 209 - Campana', -34.158027, -58.966882);
 		clubes['CASI'] = new Club('Club Atletico San Isidro', 'Roque Sáenz Peña 499, Acassuso', -34.474324, -58.506095);
 		clubes['CASI Escobar'] = new Club('CASI Escobar', '', -34.361478, -58.811571);
+		//clubes['CUBA'] = new Club('Club Universitario de Buenos Aires', '', );
 		clubes['Curupayti'] = new Club('Curupayti', 'Acassuso 2450, Hurlingham', -34.590143, -58.647034);
+		//clubes['CUQ'] = new Club('Circulo Universitario de Quilmes', '', );
 		clubes['DAOM'] = new Club('Club DAOM', 'Varela 1802, esquina Castañares - Capital Federal', -34.647216, -58.449127);
 		clubes['DAOM Anexo'] = new Club('DAOM Anexo', 'Ana María Janner y Av. Lafuente - Capital Federal', -34.657038, -58.446633);
 		clubes['Dep. Francesa'] = new Club('Asociacion Deportiva Francesa', 'Ruta Panamericana, Acceso a Pilar Km. 42,5 Del Viso', -34.437265, -58.791712);
@@ -166,20 +170,32 @@
 		clubes['Pucara'] = new Club('Club Pucara', 'Falucho 766. Burzaco', -34.815987, -58.386028);
 		clubes['Pueyrredon'] = new Club('Pueyrredon Club de Rugby', 'Cap. Juan de San Martín Nº 1391. Boulogne - San Isidro', -34.493449, -58.572715);
 		clubes['Pueyrredon Anexo'] = new Club('Anexo de Pueyrredon Club de Rugby', 'Ruta Panamericana (Ramal a Garín) km. 38 - Benavidez', -34.394725, -58.66265);
-		//clubes['Regatas BV'] = new Club('Club de Regatas Bella Vista', '', );
-		//clubes['Atletico del Rosario'] = new Club('Club Atletico del Rosario', '', );
-		//clubes['San Albano'] = new Club('Asociacion de ex-alumnos del Colegio San Albano', '', );
-		//clubes['San Andres'] = new Club('Asociacion de ex-alumnos San Andres', '', );
-		//clubes['San Antonio de Padua'] = new Club('Club Atletico San Antonio de Padua', '', );
-		//clubes['San Carlos'] = new Club('Club San Carlos', '', );
-		//clubes['San Cirano'] = new Club('Club San Cirano', '', );
-		//clubes['San Fernando'] = new Club('Club San Fernando', '', );
+		clubes['Regatas BV'] = new Club('Club de Regatas Bella Vista', 'Av. Francia 1956 Bella Vista', -34.570044, -58.678719, [{
+			location: new google.maps.LatLng(-34.567128, -58.686272),
+			stopover: false
+		}]);
+		clubes['San Albano'] = new Club('Asociacion de ex-alumnos del Colegio San Albano', 'Av. Espora 4920 (Ruta 210), Burzaco', -34.839782, -58.381168);
+		clubes['San Andres'] = new Club('Asociacion de ex-alumnos San Andres', 'Italia 1600 y Rivadavia - Benavidez', -34.381523, -58.686816);
+		//clubes['San Andres Anexo'] = new Club('Anexo de Asociacion de ex-alumnos San Andres', 'Lasalle y 33 Orientales - Beccar', );
+		clubes['San Antonio de Padua'] = new Club('Club Atletico San Antonio de Padua', 'Antezana y Piedrabuena, Merlo Norte', -34.646729, -58.728389);
+		clubes['San Carlos'] = new Club('Club San Carlos', 'Alejandro Vitale S/N Altura Ruta 197 (Km. 12,500) Pablo Nogués', -34.476000, -58.682755);
+		clubes['San Cirano'] = new Club('Club San Cirano', 'Cnel. Domínguez 2897 Villa Celina', -34.697865, -58.482319);
+		clubes['San Fernando'] = new Club('Club San Fernando', 'Sarmiento y Escalada, San Fernando', -34.436685, -58.554413);
 		clubes['SIC'] = new Club('San Isidro Club', 'Av. Blanco Encalada 404 - San Isidro', -34.492407, -58.556835);
 		clubes['SIC Anexo'] = new Club('San Isidro Club Anexo', 'Camino Real - Morón - San Fernando 1998 - Boulogne Sur', -34.486846, -58.561308);
-		//clubes['San Jose'] = new Club('Club San Jose', '', );
+		clubes['San Jose'] = new Club('Club San Jose', 'Centenario 210 - Garín', -34.448727, -58.726169);
 		clubes['San Luis'] = new Club('Club San Luis', 'Calle 520 e/ 27 y 29 - La Plata', -34.910240, -58.003950);
-		//clubes[''] = new Club('', '', );
-		//clubes[''] = new Club('', '', );
+		clubes['San Marcos'] = new Club('Club San Marcos de Monte Grande', 'Faro Patagonia y Neuquén - Monte Grande', -34.846167, -58.471796);
+		clubes['San Martin'] = new Club('Club Atletico Ferrocarril General San Martin', 'Lope de Vega y Colón - Saenz Peña', -34.607963, -58.533353);
+		//clubes['San Miguel'] = new Club('San Miguel Rugby y Hockey Club', '', );
+		//clubes['San Patricio'] = new Club('Club San Patricio', '', );
+		//clubes['Sociedad Hebraica'] = new Club('Sociedad Hebraica Argentina', '', );
+		//clubes['SITAS'] = new Club('Sociedad Italiana de Tiro Al Segno', '', );
+		//clubes['St. Brendan's] = new Club('St Brendan's Rugby Club', '', );
+		//clubes['Tigre'] = new Club('Tigre Rugby Club', '', );
+		//clubes['Universitario de La Plata'] = new Club('Club Universitario de La Plata', '', );
+		//clubes['Varela'] = new Club('Club Varela Junior', '', );
+		//clubes['Virreyes'] = new Club('Virreyes Rugby Club', '', );
 
 		for (club in clubes){
 			option = $('<option/>');
@@ -190,7 +206,9 @@
 	};
 
 	/*
-	* Initializes dropdowns with all the clubs
+	* Initializes dropdown inputs with all the clubs
+	* @method _initializeDropdownsValues
+	* @private
 	*/
 	_initializeDropdownsValues = function() {
 		var option = $('<option>Desde donde estoy...</option>');
@@ -202,6 +220,7 @@
 	/*
 	* Sends the request of the route and display the results
 	* @method _sendRequest
+	* @private
 	*/
 	_sendRequest = function(request) {
 		NProgress.start();
@@ -215,7 +234,7 @@
 	};
 
 	/*
-	*	Get user's current position. It returns a promise
+	* Get user's current position. It returns a promise
 	* @method _getCurrentPositionDeferred
 	* @private
 	*/
