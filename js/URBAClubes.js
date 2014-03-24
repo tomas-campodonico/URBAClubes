@@ -25,14 +25,7 @@
 				$(ev.currentTarget).find('.arrow')
 				  .toggleClass('pointerDown')
 				  .toggleClass('pointerUp');
-				}
-		});
-
-		//Configure Nprogress
-		NProgress.configure({
-			ease: 'ease',
-			speed: 500,
-			template: $('.progress-bar')
+			}
 		});
 	});
 

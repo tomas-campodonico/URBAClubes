@@ -12,6 +12,21 @@ main > div {
 	display: inline-block;
 }
 
+#urba_logo {
+	margin: 0 auto 0 auto;
+	display: block;
+}
+
+select, label {
+	margin: 0 auto 0 auto;
+	display: block;
+	width: 100%;
+}
+
+.show-route-options {
+	margin: 0 auto 0 auto;
+}
+
 /* Styling the map-canvas */
 #map-canvas {
 	margin-top: 7px;
@@ -70,6 +85,30 @@ div.show-route-options div.pointerUp {
 
 .route-options {
 	display: none;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px){
+	form {
+		padding: 0 100px 0 100px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	form {
+		padding: 0 100px 0 100px;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1200px){
+	.span6 {
+		width: 60%;
+	}
+
+	[class*="span"] {
+		float: left;
+		min-height: 1px;
+		margin-left: 20px;
+	}
 }
 
 /* Styles for mobile */

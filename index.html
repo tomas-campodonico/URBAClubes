@@ -20,9 +20,6 @@
 	<title>Como llegar - URBA</title>
 </head>
 <body>
-	<!-- Progress bar -->
-	<div class="progress-bar"></div>
-
 	<!-- Container -->
 	<main class="container">
 		<div class="span5 pagination-centered">
@@ -33,7 +30,7 @@
 				<label for="select-club">Seleccion&aacute; el club destino: </label>
 				<select id="select-club" name="select-club"></select>
 				<div class="show-route-options">
-					Opciones
+					<span>Opciones</span>
 					<div class="arrow pointerDown"></div>
 					<div class="route-options">
 						<input type="checkbox" id="avoid-tolls-option"> Evitar peajes (si es posible)<br>
@@ -60,6 +57,7 @@
 	<!-- JavaScripts -->
 	<script type="text/javascript" src="dist/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY&sensor=false"></script>
+	<script type="text/javascript" src="js/nprogress.js"></script>
 	<script type="text/javascript" src="dist/URBAClubes.min.js"></script>
 
 </body>
