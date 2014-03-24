@@ -128,7 +128,8 @@
 		clubes['Ciudad de Campana'] = new Club('Ciudad de Campana', 'Chiclana 209 - Campana', -34.158027, -58.966882);
 		clubes['CASI'] = new Club('Club Atletico San Isidro', 'Roque Sáenz Peña 499, Acassuso', -34.474324, -58.506095);
 		clubes['CASI Escobar'] = new Club('CASI Escobar', '', -34.361478, -58.811571);
-		//clubes['CUBA'] = new Club('Club Universitario de Buenos Aires', '', );
+		clubes['CUBA'] = new Club('Club Universitario de Buenos Aires', 'Avda.Perón y Pasaje Juan Cruz Migliore', -34.510557, -58.686827);
+		clubes['CUBA Anexo'] = new Club('Anexo del Club Universitario de Buenos Aires', 'Artigas y Los Cedros', -34.513193, -58.698345);
 		clubes['Curupayti'] = new Club('Curupayti', 'Acassuso 2450, Hurlingham', -34.590143, -58.647034);
 		//clubes['CUQ'] = new Club('Circulo Universitario de Quilmes', '', );
 		clubes['DAOM'] = new Club('Club DAOM', 'Varela 1802, esquina Castañares - Capital Federal', -34.647216, -58.449127);
@@ -187,13 +188,13 @@
 		clubes['San Luis'] = new Club('Club San Luis', 'Calle 520 e/ 27 y 29 - La Plata', -34.910240, -58.003950);
 		clubes['San Marcos'] = new Club('Club San Marcos de Monte Grande', 'Faro Patagonia y Neuquén - Monte Grande', -34.846167, -58.471796);
 		clubes['San Martin'] = new Club('Club Atletico Ferrocarril General San Martin', 'Lope de Vega y Colón - Saenz Peña', -34.607963, -58.533353);
-		//clubes['San Miguel'] = new Club('San Miguel Rugby y Hockey Club', '', );
-		//clubes['San Patricio'] = new Club('Club San Patricio', '', );
-		//clubes['Sociedad Hebraica'] = new Club('Sociedad Hebraica Argentina', '', );
-		//clubes['SITAS'] = new Club('Sociedad Italiana de Tiro Al Segno', '', );
-		//clubes['St. Brendan's] = new Club('St Brendan's Rugby Club', '', );
-		//clubes['Tigre'] = new Club('Tigre Rugby Club', '', );
-		//clubes['Universitario de La Plata'] = new Club('Club Universitario de La Plata', '', );
+		clubes['San Miguel'] = new Club('San Miguel Rugby y Hockey Club', 'Pardo 5200 - San Miguel', -34.584283, -58.729344);
+		clubes['San Patricio'] = new Club('Club San Patricio', 'Caamaño 924, La Lonja - Pilar', -34.432794, -58.832332);
+		clubes['Sociedad Hebraica'] = new Club('Sociedad Hebraica Argentina', 'Ruta 8 Km. 51,5 -Pilar', -34.453644, -58.882279);
+		clubes['SITAS'] = new Club('Sociedad Italiana de Tiro Al Segno', 'Tte. Gral. Bergamini y Formosa - El Palomar', -34.617906, -58.591503);
+		clubes['St. Brendan\'s'] = new Club('St Brendan\'s Rugby Club', 'Barrio San José de los Talas - Pilar', -34.424427, -58.945791);
+		clubes['Tigre'] = new Club('Tigre Rugby Club', 'Benito Lynch 1060 - Tigre', -34.437350, -58.591625);
+		clubes['Universitario de La Plata'] = new Club('Club Universitario de La Plata', 'Calle 496 - Gonnet', -34.879749, -58.018179);
 		//clubes['Varela'] = new Club('Club Varela Junior', '', );
 		//clubes['Virreyes'] = new Club('Virreyes Rugby Club', '', );
 
