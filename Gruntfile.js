@@ -23,13 +23,12 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      static: {
+    connect: {
+      server: {
         options: {
-          optimizationLevel: 7
-        },
-        files: {
-          'dist/urba-pc.png': 'img/urba-pc.png'
+          port: 8000,
+          hostname: '0.0.0.0',
+          keepalive: true
         }
       }
     }
@@ -37,12 +36,11 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task(s).
-  grunt.registerTask('imagemin', ['imagemin']);
   grunt.registerTask('build', ['concat', 'uglify']);
-
+  grunt.registerTask('default', ['build', 'connect:server']);
 };

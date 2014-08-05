@@ -25,6 +25,9 @@
 		$('#close-modal').click(function(ev){
 			$('.route-info').addClass('hidden');
 		});
+		$('#info-btn').click(function(ev){
+			$('.alert').toggleClass('hidden');
+		});
 	});
 
 	/*
