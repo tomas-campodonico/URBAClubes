@@ -1,52 +1,145 @@
 /* Global styles */
 html { 
 	height: 100%;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
 }
       
 body {
-	padding: 3em;
-	background-color: #B2B0B0;
+	height: 100%;
+}
+
+footer {
+	margin-top: 20px;
+	height: 10%;
+}
+
+.loading-mask {
+	position: absolute;
+	z-index: 1000;
+	background: rgba(0,0,0,0.3);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.loading-mask span {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	margin-top: 40%;
+	font-size: 35px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.container {
+	height: 100%;
 }
 
 main > div {
 	display: inline-block;
 }
 
-#urba_logo {
-	margin: 0 auto 0 auto;
-	display: block;
+
+
+/* Styling form */
+.form-view {
+	z-index: 2;
+	position: fixed;
+	padding: 5px;
+	height: 100px;
+	width: 100%;  
 }
 
-select, label {
-	margin: 0 auto 0 auto;
-	display: block;
-	width: 100%;
+form {
+	background: rgb(255,215,0);
+	height: 100%;
+	padding: 15px;
+	margin: 5px;
+	border-radius: 5px;
+	border: solid #000000 1px;
+	box-shadow: 3px 3px 5px;
 }
 
-.show-route-options {
+form > .btn {
+	display: block;
 	margin: 0 auto 0 auto;
+	width: 180px;
+	position: absolute;
+	right: 35px;
+	top: 35px;
+}
+
+.btn#view-route {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 180px;
+	position: absolute;
+	right: 35px;
+	bottom: 35px;
+	box-shadow: 3px 3px 3px #000000;
+}
+
+select {
+	width: calc(100% - 400px);
+	border-radius: 4px;
+	padding: 3px;
+}
+
+label {
+	width: 200px;
 }
 
 /* Styling the map-canvas */
-#map-canvas {
-	margin-top: 7px;
-	height: 445px;
+.map-view {
+	height: 100%;
 	width: 100%;
-	border: solid 1px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#map-canvas {
+	height: 100%;
+	width: 100%;
 }
 
 .route-info {
-	visibility: hidden;
+	position: absolute;
+	z-index: 500;
+	background: rgba(0,0,0,0.3);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.route-info .btn {
+	position: absolute;
+	right: 100px;
+}
+
+.route-info-data {
+	overflow: auto;
+	background: rgb(225, 150, 0);
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+	border: solid;
+	box-shadow: 3px 3px 3px;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	max-height: 75%;
 }
 
 .route-info__distance, .route-info__duration {
 	font-weight: bold;
-}
-
-.btn {
-	display: block;
-	margin: 0 auto 0 auto;
-	width: 220px;
 }
 
 div.show-route-options {
@@ -87,43 +180,43 @@ div.show-route-options div.pointerUp {
 	display: none;
 }
 
-@media screen and (min-width: 500px) and (max-width: 767px){
-	form {
-		padding: 0 100px 0 100px;
-	}
-}
-
-@media screen and (min-width: 1200px){
-	form {
-		padding: 0 100px 0 100px;
-	}
-}
-
-@media screen and (min-width: 980px) and (max-width: 1200px){
-	.span6 {
-		width: 60%;
-	}
-
-	[class*="span"] {
-		float: left;
-		min-height: 1px;
-		margin-left: 20px;
-	}
-}
-
 /* Styles for mobile */
 @media screen and (max-width: 400px){
 
-	#map-canvas {
-		margin-top: 7px;
-		height: 345px;
-		width: 100%;
-		border: solid 1px;
+	form {
+		padding: 5px !important;
 	}
 
-	#urba_logo {
-		width: 200px;
-		height: 250px;
+	form > .btn {
+		right: 15px;
+		top: 67px;
+		width: 70px;
+		padding: 3px;
+	}
+
+	label {
+		width: 155px;
+		font-size: 12px;
+	}
+
+	select {
+		width: calc(100% - 160px);
+		padding: 1px 0;
+	}
+
+	.loading-mask span {
+		font-size: 25px;
+	}
+
+	.btn#view-route {
+		width: 90px;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	.route-info .btn {
+		right: 46px;
+		padding: 2px;
 	}
 
 }

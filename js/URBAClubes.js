@@ -19,13 +19,11 @@
 
 		_initializeDropdownsValues();
 		$('#get-route').click(calcRoute);
-		$('.show-route-options').click(function(ev){
-			if (ev.target === ev.currentTarget || $(ev.target).hasClass('arrow')) {
-				$('.route-options').toggle();
-				$(ev.currentTarget).find('.arrow')
-				  .toggleClass('pointerDown')
-				  .toggleClass('pointerUp');
-			}
+		$('#view-route').click(function(ev){
+			$('.route-info').removeClass('hidden');
+		});
+		$('#close-modal').click(function(ev){
+			$('.route-info').addClass('hidden');
 		});
 	});
 
@@ -58,7 +56,7 @@
 			dfd;
 
 		start = $('#origin-club').val();
-	  endClub = $('#select-club').val();
+	  	endClub = $('#select-club').val();
 
 		if (typeof clubes[endClub] !== 'undefined') {
 			if (clubes[start]) {
@@ -82,12 +80,14 @@
 						});
 					});
 				} else {
-			    alert('Al parecer la funcionalidad de Geolocalizacion, necesaria por la aplicacion, no está disponible en su navegador.');
-			  }
+			    	alert('Al parecer la funcionalidad de Geolocalizacion, necesaria por la aplicacion, no está disponible en su navegador.');
+			  	}
 			}
 		}
 
-		$(window).scrollTop($('#map-canvas').offset().top);
+		$('html, body').animate({
+  			scrollTop: $('#map-canvas').offset().top
+		}, 1000);
 		return false;
 	};
 
@@ -217,14 +217,33 @@
 	* @private
 	*/
 	_sendRequest = function(request) {
-		NProgress.start();
+		this._showLoadingMask();
 		directionsService.route(request, function(result, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
 				_showResults(result);
 				directionsDisplay.setDirections(result);
-				NProgress.done();
+				this._hideLoadingMask();
+				$('#view-route').removeClass('hidden');
 			}
 		});
+	};
+
+	/*
+	* Show modal with a loading spinner
+	* @private
+	*/
+	_showLoadingMask = function() {
+		$('.loading-mask').removeClass('hidden');
+		$('body').css('overflow', 'hidden');
+	};
+
+	/*
+	* Hide modal with a loading spinner
+	* @private
+	*/
+	_hideLoadingMask = function() {
+		$('.loading-mask').addClass('hidden');
+		$('body').css('overflow', 'auto');
 	};
 
 	/*
