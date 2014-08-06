@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+	<meta name="description" content="Direcciones de los clubes de la URBA">
+	<meta name="author" content="Tomas Campodonico">
+	<meta http-equiv="expires" content="Mon, 31 Dec 2015 11:12:01 GMT">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.css" rel="stylesheet"	type="text/css"/>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="css/main.css" rel="stylesheet" type="text/css"/>
+
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="img/favicon.png">
+	
+	<title>Como llegar - URBA</title>
+</head>
+<body>
+	<div class="loading-mask">
+		<span>Cargando mapa...</span>
+	</div>
+	<!-- Container -->
+	<main class="container">
+		<div class="map-view">
+			<div class="navbar">
+				<a href="/URBAClubes/" data-bypass="true">Volver</a>
+			</div>
+			<div class="form-view">
+				<form>
+					<label for="origin-club">Seleccion&aacute; el origen: </label>
+					<select id="origin-club" name="origin-club"></select>
+					<label for="select-club">Seleccion&aacute; el club destino: </label>
+					<select id="select-club" name="select-club"></select>
+					<a id="get-route" class="btn btn-primary" href="#" data-bypass="true">Ver ruta</a>
+				</form>
+			</div>
+
+			<div id="map-canvas"></div>
+			<div class="route-info hidden">
+				<div class="route-info-data">
+					<div>
+						<span>Indicaciones al club</span>
+						<a id="close-modal" class="btn btn-primary" href="#">X</a>
+					</div>
+					<div>
+						Distancia: <span class="route-info__distance"></span><br>
+						Tiempo estimado: <span class="route-info__duration"></span><hr>
+						<span class="route-info__instructions"></span><hr>
+					</div>
+				</div>
+			</div>
+			<a id="view-route" class="btn btn-primary hidden" href="#" data-bypass="true">Ver guía</a>
+			<a id="info-btn" class="btn btn-info" href="#" data-bypass="true">!</a>
+			<div class="hidden alert alert-warning alert-dismissible" role="alert">
+  				<strong>Atencion!</strong> Las rutas que se muestran en el mapa son calculadas por Google Maps. Es responsabilidad del usuario el tomar la ruta mostrada.
+			</div>
+		</div>
+	</main>
+
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY&sensor=false"></script>
+	<script type="text/javascript" src="dist/URBAClubes.min.js"></script>
+
+</body>
+</html>

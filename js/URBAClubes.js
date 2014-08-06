@@ -6,7 +6,7 @@
 		clubes = new Array;
 
 
-	$(document).ready( function() {
+	$(document).ready(function() {
 		//Initialize map centered in Buenos Aires province
 		directionsDisplay = new google.maps.DirectionsRenderer(); 
 		map = new google.maps.Map($('#map-canvas').get(0), {
@@ -28,6 +28,8 @@
 		$('#info-btn').click(function(ev){
 			$('.alert').toggleClass('hidden');
 		});
+
+		_hideLoadingMask();
 	});
 
 	/*
@@ -73,6 +75,7 @@
 			} else {
 				if (navigator.geolocation) {
 					dfd = _getCurrentPositionDeferred();
+					_showLoadingMask('Buscando posicion...');
 					$.when(dfd).done(function(pos) {
 						_sendRequest({
 							origin: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
@@ -87,11 +90,6 @@
 			  	}
 			}
 		}
-
-		$('html, body').animate({
-  			scrollTop: $('#map-canvas').offset().top
-		}, 1000);
-		return false;
 	};
 
 	/*
@@ -194,6 +192,8 @@
 		//clubes['Varela'] = new Club('Club Varela Junior', '', );
 		//clubes['Virreyes'] = new Club('Virreyes Rugby Club', '', );
 
+		Object.freeze(clubes);
+		
 		for (club in clubes){
 			option = $('<option/>');
 			option.attr({ 'value': club }).text(club);
@@ -220,12 +220,12 @@
 	* @private
 	*/
 	_sendRequest = function(request) {
-		this._showLoadingMask();
+		_showLoadingMask('Cargando ruta...');
 		directionsService.route(request, function(result, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
 				_showResults(result);
 				directionsDisplay.setDirections(result);
-				this._hideLoadingMask();
+				_hideLoadingMask();
 				$('#view-route').removeClass('hidden');
 			}
 		});
@@ -235,9 +235,11 @@
 	* Show modal with a loading spinner
 	* @private
 	*/
-	_showLoadingMask = function() {
-		$('.loading-mask').removeClass('hidden');
-		$('body').css('overflow', 'hidden');
+	_showLoadingMask = function(text) {
+		$('.loading-mask span').text(text);
+		if ($('.loading-mask').hasClass('hidden')) {
+			$('.loading-mask').removeClass('hidden');
+		}
 	};
 
 	/*
@@ -246,7 +248,6 @@
 	*/
 	_hideLoadingMask = function() {
 		$('.loading-mask').addClass('hidden');
-		$('body').css('overflow', 'auto');
 	};
 
 	/*

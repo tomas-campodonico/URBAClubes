@@ -33,6 +33,24 @@ body {
 	text-shadow: 2px 2px 2px #000000;
 }
 
+.navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 40px;
+	border-bottom: solid 1px;
+}
+
+.navbar a {
+	height: 40px;
+	line-height: 26px;
+	display: inline-block;
+	padding: 6px 15px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 .container {
 	height: 100%;
 }
@@ -91,11 +109,12 @@ label {
 
 /* Styling the map-canvas */
 .map-view {
-	height: 100%;
+	height: calc(100% - 40px);
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
+	margin-top: 40px;
 }
 
 #map-canvas {
