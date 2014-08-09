@@ -27,13 +27,15 @@
 	<main class="container">
 		<div class="map-view">
 			<div class="navbar">
-				<a href="/URBAClubes/" data-bypass="true">Volver</a>
+				<a id="back" href="/URBAClubes/" data-bypass="true">Volver</a>
+				<a id="search-btn" class="hidden" href="#" data-bypass="true">Buscar</a>
 			</div>
 			<div class="form-view">
 				<form>
-					<label for="origin-club">Seleccion&aacute; el origen: </label>
+					<span>>> Arrastrar para ocultar >></span>
+					<label for="origin-club">Origen: </label>
 					<select id="origin-club" name="origin-club"></select>
-					<label for="select-club">Seleccion&aacute; el club destino: </label>
+					<label for="select-club">Destino: </label>
 					<select id="select-club" name="select-club"></select>
 					<a id="get-route" class="btn btn-primary" href="#" data-bypass="true">Ver ruta</a>
 				</form>

@@ -65,7 +65,8 @@ main > div {
 	position: fixed;
 	padding: 5px;
 	height: 100px;
-	width: 100%;  
+	width: 100%;
+	-webkit-transition: 0.5s ease-out;
 }
 
 form {
@@ -76,6 +77,10 @@ form {
 	border-radius: 5px;
 	border: solid #000000 1px;
 	box-shadow: 3px 3px 5px;
+}
+
+form span {
+	display: none;
 }
 
 form > .btn {
@@ -98,13 +103,14 @@ form > .btn {
 }
 
 select {
-	width: calc(100% - 400px);
+	width: calc(100% - 280px);
+	margin-right: 206px;
 	border-radius: 4px;
 	padding: 3px;
 }
 
 label {
-	width: 200px;
+	width: 70px;
 }
 
 /* Styling the map-canvas */
@@ -239,28 +245,54 @@ div.show-route-options div.pointerUp {
 	padding: 5px;
 }
 
+#search-btn {
+	float: right;
+}
+
+.form-view.left {
+	-webkit-transform: translateX(100%);
+}
+
 /* Styles for mobile */
 @media screen and (max-width: 400px){
 
 	form {
-		padding: 5px !important;
+		padding: 25px 5px 5px 5px !important;
+	}
+
+	form span {
+		position: absolute;
+		top: 10px;
+		display: block;
+		width: 91%;
+		text-align: center;
+		font-weight: bold;
 	}
 
 	form > .btn {
-		right: 15px;
-		top: 67px;
-		width: 70px;
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		margin: 3px auto;
 		padding: 3px;
 	}
 
+	.form-view {
+		height: 128px;
+	}
+
 	label {
-		width: 155px;
+		width: 50px;
 		font-size: 12px;
 	}
 
 	select {
-		width: calc(100% - 160px);
-		padding: 1px 0;
+		width: calc(100% - 54px);
+		margin-right: 0px;
+		padding: 2px;
+		border-radius: 2px;
+		background: #FFFFFF;
 	}
 
 	.loading-mask span {
@@ -276,5 +308,4 @@ div.show-route-options div.pointerUp {
 	.alert.alert-warning.alert-dismissible {
 		width: 80%;
 	}
-
 }

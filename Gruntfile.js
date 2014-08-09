@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -29,7 +30,26 @@ module.exports = function(grunt) {
           port: 8000,
           hostname: '0.0.0.0',
           keepalive: true,
-          root: '/URBAClubes/'
+          base: ''
+        }
+      }
+    },
+
+    watch: {
+      scripts: {
+        files: '**/*.js',
+        tasks: ['build']
+      }
+    },
+
+    concurrent: {
+      default: {
+        tasks: [
+          'connect:server',
+          'watch'
+        ],
+        options: {
+          logConcurrentOutput: true
         }
       }
     }
@@ -40,8 +60,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-concurrent')
 
   // Default task(s).
   grunt.registerTask('build', ['concat', 'uglify']);
-  grunt.registerTask('default', ['build', 'connect:server']);
+  grunt.registerTask('default', ['build', 'concurrent']);
 };

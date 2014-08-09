@@ -18,6 +18,8 @@
 		directionsDisplay.setPanel($('.route-info__instructions').get(0));
 
 		_initializeDropdownsValues();
+
+		//Event handlers
 		$('#get-route').click(calcRoute);
 		$('#view-route').click(function(ev){
 			$('.route-info').removeClass('hidden');
@@ -29,8 +31,35 @@
 			$('.alert').toggleClass('hidden');
 		});
 
+		if (isMobile()) {
+			$('.form-view').on('swiperight',function(){
+				$(this).addClass('left');
+				$('#search-btn').removeClass('hidden');
+			});
+
+			$('#search-btn').click(function(ev){
+				$(this).addClass('hidden');
+				$('.form-view').removeClass('left');
+			});
+		}
+
 		_hideLoadingMask();
 	});
+
+	function isMobile() { 
+		if (navigator.userAgent.match(/Android/i)
+ 			|| navigator.userAgent.match(/webOS/i)
+			|| navigator.userAgent.match(/iPhone/i)
+			|| navigator.userAgent.match(/iPad/i)
+			|| navigator.userAgent.match(/iPod/i)
+			|| navigator.userAgent.match(/BlackBerry/i)
+			|| navigator.userAgent.match(/Windows Phone/i)
+		){
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	/*
 	* @constructor Club
