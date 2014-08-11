@@ -41,7 +41,7 @@ define([
           clubes: self.clubes.models
         }));
 
-        if (self.options.lat && self.options.lon) {
+        if (self.options && self.options.lat && self.options.lon) {
           self.mapOpts = {
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP,

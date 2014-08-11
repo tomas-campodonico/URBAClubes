@@ -1,6 +1,6 @@
 <div class="list-view">
 	<div class="navbar">
-		<a id="back" href="/#" data-bypass="true">Volver</a>
+		<a id="back" href="#" data-bypass="true">Volver</a>
 		<input id="search-input" placeholder="Filtrar clubes" type="search" />
 	</div>
 	<ul class="club-list">
@@ -10,7 +10,7 @@
 				<div class="club-address"><%= club.get('address') %></div>
 				<% if (club.get('address') !== '') { %>
 					<a class="map" href="#map?club=<%= club.get('short_name') %>&lat=<%= club.get('lat') %>&lon=<%= club.get('lon') %>">
-						<img src="img/map-icon.png" />
+						<img src="/URBAClubes/app/img/map-icon.png" />
 						<span>Mapa</span>
 					</a>
 				<% } %>
