@@ -6,7 +6,7 @@ define([
 
 	var ClubCollection = Backbone.Collection.extend({
 		model: ClubModel,
-		url: '../json/clubes.json',
+		url: 'app/json/clubes.json',
 
 		/*
 		* Returns whether there is a club with the given name

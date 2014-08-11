@@ -11,7 +11,8 @@
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-connect": "*",
     "grunt-contrib-watch": "*",
-    "grunt-concurrent": "*"
+    "grunt-concurrent": "*",
+    "grunt-contrib-copy": "*"
   },
   "repository": {
     "type": "git",
