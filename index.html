@@ -9,9 +9,10 @@
 	<meta http-equiv="expires" content="Mon, 31 Dec 2015 11:12:01 GMT">
 
 	<!-- Stylesheets -->
-	<link href="css/bootstrap.css" rel="stylesheet"	type="text/css"/>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="app/css/bootstrap.css" rel="stylesheet"	type="text/css"/>
+	<link href="app/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="app/css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="app/css/main.css" rel="stylesheet" type="text/css"/>
 
 
 	<!-- Icons -->
@@ -20,10 +21,11 @@
 	<title>Como llegar - URBA</title>
 </head>
 <body>
-	<h1>GUIA URBA</h1>
-	<h3>Gu&iacute;a para llegar a los clubes de la URBA</h3>
-	<a class="btn btn-primary" href="/URBAClubes/map.html">Mapa</a>
-	<a class="btn btn-success" href="/URBAClubes/list.html">Listado</a>
+	<div class="loading-mask hidden">
+		<span>Cargando mapa...</span>
+	</div>
+	<main id="container"></main>
 
+	<script data-main="app/js/main.js" src="app/js/vendor/requirejs/require.js"></script>
 </body>
 </html>
