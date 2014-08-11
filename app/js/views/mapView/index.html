@@ -1,0 +1,47 @@
+<div class="map-view">
+	<div class="navbar">
+		<a id="back" href="/#" data-bypass="true">Volver</a>
+		<a id="search-btn" class="hidden" data-toggle="#">Buscar</a>
+	</div>
+	<div class="form-view">
+		<form>
+			<span class="swipe-instructions hidden">>> Arrastrar para ocultar >></span>
+			<label for="origin-club">Origen: </label>
+			<select id="origin-club" name="origin-club">
+				<option selected>Posicion actual...</option>
+				<% _.each(clubes, function(club) { 
+					if (club.get('lat') && club.get('lon')) { %>
+					<option><%= club.get('short_name') %></option>
+				<% }}) %>
+			</select>
+			<label for="select-club">Destino: </label>
+			<select id="select-club" name="select-club">
+				<% _.each(clubes, function(club) { 
+					if (club.get('lat') && club.get('lon')) { %>
+					<option><%= club.get('short_name') %></option>
+				<% }}) %>
+			</select>
+			<a id="get-route" class="btn btn-primary" data-toggle="#" data-bypass="true">Ver ruta</a>
+		</form>
+	</div>
+
+	<div id="map-canvas"></div>
+	<div class="route-info hidden">
+		<div class="route-info-data">
+			<div>
+				<span>Indicaciones al club</span>
+				<a id="close-modal" class="btn btn-primary" data-toggle="#">X</a>
+			</div>
+			<div>
+				Distancia: <span class="route-info__distance"></span><br>
+				Tiempo estimado: <span class="route-info__duration"></span><hr>
+				<span class="route-info__instructions"></span><hr>
+			</div>
+		</div>
+	</div>
+	<a id="view-route" class="btn btn-primary hidden" data-toggle="#" data-bypass="true">Ver guía</a>
+	<a id="info-btn" class="btn btn-info" data-toggle="#">!</a>
+	<div class="hidden alert alert-warning alert-dismissible" role="alert">
+			<strong>Atencion!</strong> Las rutas que se muestran en el mapa son calculadas por Google Maps. Es responsabilidad del usuario el tomar la ruta mostrada.
+	</div>
+</div>

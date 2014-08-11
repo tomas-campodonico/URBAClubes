@@ -30,14 +30,14 @@ module.exports = function(grunt) {
           port: 8000,
           hostname: '0.0.0.0',
           keepalive: true,
-          base: ''
+          base: 'app'
         }
       }
     },
 
     watch: {
       scripts: {
-        files: '**/*.js',
+        files: 'app/js/**/*.js',
         tasks: ['build']
       }
     },
