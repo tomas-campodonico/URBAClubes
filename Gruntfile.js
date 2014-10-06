@@ -44,9 +44,28 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
         }
       }
+    },
+
+    cssmin: {
+      combine: {
+        files: {
+          'app/css/main.min.css': ['app/css/*.css']
+        }
+      }
+    },
+
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['app/**/*.js'],
+        dest: 'app/js/built.js',
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -54,7 +73,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent')
 
   // Default task(s).
-  grunt.registerTask('default', ['concurrent']);
+  grunt.registerTask('default', ['cssmin', 'concurrent']);
   grunt.registerTask('build:dist', [
     'copy'
   ]);
