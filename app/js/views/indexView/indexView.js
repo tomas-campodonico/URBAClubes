@@ -9,7 +9,9 @@ define([
     el: $('#container'),
 
     render: function(){
-      this.$el.html(_.template(template));
+      if (!$('div.index-view').length) {
+        this.$el.html(_.template(template));
+      }
     }
   });
 
