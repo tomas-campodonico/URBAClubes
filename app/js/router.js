@@ -48,6 +48,12 @@ define([
     var app_router = new AppRouter;
 
     Backbone.history.start();
+
+    Backbone.history.on("all", function (route, router) {
+      if (!$('.loading-mask').hasClass('hidden')) {
+        $('.loading-mask').addClass('hidden');
+      }
+    });
   };
 
   return {

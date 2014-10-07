@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	height: 100%;
+	width: 100%;
 	position: fixed;
 }
 
@@ -54,7 +55,7 @@ body {
 .list-view .club-list {
 	margin: 40px 0 0 0;
 	padding: 0;
-	height: 100%;
+	height: calc(100% - 40px);
 	overflow-y: scroll;
 }
 

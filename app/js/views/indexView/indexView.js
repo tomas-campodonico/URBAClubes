@@ -9,9 +9,7 @@ define([
     el: $('#container'),
 
     render: function(){
-      if (!$('div.index-view').length) {
-        this.$el.html(_.template(template));
-      }
+      this.$el.html(_.template(template));
     }
   });
 

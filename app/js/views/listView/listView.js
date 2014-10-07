@@ -10,7 +10,7 @@ define([
     el: $('#container'),
 
     events: {
-      'keyup #search-input': 'filterList'
+      'input #search-input': 'filterList'
     },
 
     initialize: function() {
