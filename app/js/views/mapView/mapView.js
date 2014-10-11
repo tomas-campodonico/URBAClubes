@@ -135,6 +135,25 @@ define([
                 waypoints: clubB.waypoints || []
               });
             });
+            $.when(dfd).fail(function(error) {
+              var message;
+              self._hideLoadingMask();
+              switch(error.code) {
+                case error.PERMISSION_DENIED:
+                  message = 'El usuario ha deshabilitado la Geolocalizacion en el browser.'
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  message = 'No se pudo encontrar su posición. Vuelva a intentarlo.'
+                  break;
+                case error.TIMEOUT:
+                  message = 'No se pudo encontrar su posición. Vuelva a intentarlo.'
+                  break;
+                case error.UNKNOWN_ERROR:
+                  message = 'Ups, algo salió mal. Compruebe su conexión y vuelve a intentarlo.'
+                  break;
+              }
+              alert(message);
+            });
           } else {
               alert('La funcionalidad de Geolocalizacion, necesaria para obtener su ubicación, no está disponible en su navegador.');
             }
@@ -213,9 +232,11 @@ define([
     * @private
     */
     _initMap: function() {
+      var trafficLayer = new google.maps.TrafficLayer();
       this.directionsService = new google.maps.DirectionsService(),
       this.directionsDisplay = new google.maps.DirectionsRenderer(); 
       this.map = new google.maps.Map($('#map-canvas').get(0), this.mapOpts);
+      trafficLayer.setMap(this.map);
       this.directionsDisplay.setMap(this.map);
       this.directionsDisplay.setPanel($('.route-info__instructions').get(0));
     }

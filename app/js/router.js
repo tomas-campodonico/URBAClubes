@@ -4,8 +4,9 @@ define([
   'backbone',
   'views/listView/listView',
   'views/indexView/indexView',
-  'views/mapView/mapView'
-], function($, _, Backbone, ListView, IndexView, MapView) {
+  'views/mapView/mapView',
+  'vendor/pace/pace.min'
+], function($, _, Backbone, ListView, IndexView, MapView, pace) {
   var AppRouter = Backbone.Router.extend({
     routes: {
       'map': 'showMap',
@@ -16,6 +17,7 @@ define([
     },
 
     showMap: function() {
+      pace.start();
       var mapView = new MapView();
       mapView.render();
     },
@@ -35,6 +37,7 @@ define([
     },
 
     showIndex: function() {
+      pace.start();
       var indexView = new IndexView();
       indexView.render();
     },
