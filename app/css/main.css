@@ -5,24 +5,15 @@ html, body {
   font-family: 'RobotoDraft', sans-serif;
 }
 
+.hidden, ::shadow .hidden {
+  visibility: none;
+  display: none;
+}
+
 core-header-panel {
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch; 
-}
-
-#menupanel {
-  position: static;
-}
-
-#searchheader {
-  font-size: 17px;
-  height: 45px;
-}
-
-#searchheader paper-input {
-  height: 100%;
-  margin-bottom: 15px;
 }
 
 #navheader {

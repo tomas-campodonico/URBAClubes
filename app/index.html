@@ -25,31 +25,24 @@
   <script src="js/vendor/webcomponentsjs/webcomponents.js"></script>
   <link rel="import" href="js/vendor/core-header-panel/core-header-panel.html">
   <link rel="import" href="js/vendor/core-toolbar/core-toolbar.html">
-	<link rel="import" href="js/vendor/paper-input/paper-input.html">
 	<link rel="import" href="js/vendor/core-scaffold/core-scaffold.html">
-	<link rel="import" href="js/vendor/core-menu/core-menu.html">
-	<link rel="import" href="js/vendor/core-item/core-item.html">
 	<link rel="import" href="js/vendor/google-map/google-map.html">
 	<link rel="import" href="js/views/listView/index.html">
+	<link rel="import" href="js/views/geoDialogView/index.html">
 	
 	<title>Como llegar - URBA</title>
 </head>
 <body fullbleed layout vertical>
 	<core-scaffold>
-
 	  <core-header-panel navigation flex>
 	    <core-toolbar id="navheader">
 	      <span style="margin: auto">Clubes</span>
 	    </core-toolbar>
-	    <core-header-panel flex id="menupanel">
-		    <core-toolbar id="searchheader">
-		      <paper-input label="Buscar club"></paper-input>
-		    </core-toolbar>
-	    	<club-list></club-list>
-	  	</core-header-panel>
+	    <club-list></club-list>
 	  </core-header-panel>
 	  
 	  <span tool>URBA</span>
+	  <geo-dialog></geo-dialog>
 
 	  <div class="content">
       <google-map

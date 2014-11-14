@@ -1,0 +1,35 @@
+<link rel="import" href="../../vendor/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="../../vendor/paper-button/paper-button.html">
+<polymer-element name="geo-dialog">
+	<template>
+		<paper-action-dialog id="geoDialog" heading="Geolocalización no disponible">
+		  <p>{{message}}</p>
+		  <paper-button affirmative autofocus role="button">OK</paper-button>
+		</paper-action-dialog>
+	</template>
+	<script>
+		Polymer({
+			ready: function() {
+				this.message = 'Su navegador no soporta la geolocalización. No podrás ver las rutas en el mapa, pero sí las direcciones de los clubes';
+				if ('geolocation' in navigator) {
+					navigator.geolocation.getCurrentPosition(this.positionSuccess, this.positionError.bind(this), {
+					  maximumAge: 30000, 
+					  timeout: 12700
+					});
+				} else {
+					this.$.geoDialog.toggle();
+				}
+			},
+			positionSuccess: function(position) {
+			  window.userpos = {
+			  	latitude: position.coords.latitude,
+			  	longitude: position.coords.longitude
+			  };
+			},
+			positionError: function() {
+			  message = 'No se pudo encontrar la posición. Revise su conexión y vuelva a intentarlo.';
+			  this.$.geoDialog.toggle();
+			}
+    });
+	</script>
+</polymer-element>
