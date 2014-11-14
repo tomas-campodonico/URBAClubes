@@ -2,7 +2,7 @@
   "name": "URBAClubes",
   "version": "0.1.0",
   "description": "A web application to find any rugby club in Buenos Aires Province",
-  "main": "index.html",
+  "main": "app/index.html",
   "dependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.13"

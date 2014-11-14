@@ -11,10 +11,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<!-- Stylesheets -->
-	<link href="css/bootstrap.css" rel="stylesheet"	type="text/css"/>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="css/index.css" rel="stylesheet" type="text/css"/>
-	<link href="css/main.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="css/main.css">
 
 
 	<!-- Icons -->
@@ -23,22 +20,46 @@
 	<link rel="icon" sizes="128x128" href="img/favicon.png">
 	<link rel="apple-touch-icon" sizes="128x128" href="img/favicon.png">
 	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="img/favicon.png">
+
+	<!-- Polymer Elements -->
+  <script src="js/vendor/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="js/vendor/core-header-panel/core-header-panel.html">
+  <link rel="import" href="js/vendor/core-toolbar/core-toolbar.html">
+	<link rel="import" href="js/vendor/paper-input/paper-input.html">
+	<link rel="import" href="js/vendor/core-scaffold/core-scaffold.html">
+	<link rel="import" href="js/vendor/core-menu/core-menu.html">
+	<link rel="import" href="js/vendor/core-item/core-item.html">
+	<link rel="import" href="js/vendor/google-map/google-map.html">
+	<link rel="import" href="js/views/listView/index.html">
 	
 	<title>Como llegar - URBA</title>
 </head>
-<body>
-	<div class="loading-mask hidden">
-		<span>Cargando mapa...</span>
-	</div>
-	<main id="container">
-		<div class="index-view">
-			<h1>GUIA URBA</h1>
-			<h3>Gu&iacute;a para llegar a los clubes de la URBA</h3>
-			<a class="btn btn-primary" href="#map">Mapa</a>
-			<a class="btn btn-success" href="#list">Listado</a>
-		</div>
-	</main>
+<body fullbleed layout vertical>
+	<core-scaffold>
 
-	<script data-main="js/main.js" src="js/vendor/requirejs/require.js"></script>
+	  <core-header-panel navigation flex>
+	    <core-toolbar id="navheader">
+	      <span style="margin: auto">Clubes</span>
+	    </core-toolbar>
+	    <core-header-panel flex id="menupanel">
+		    <core-toolbar id="searchheader">
+		      <paper-input label="Buscar club"></paper-input>
+		    </core-toolbar>
+	    	<club-list></club-list>
+	  	</core-header-panel>
+	  </core-header-panel>
+	  
+	  <span tool>URBA</span>
+
+	  <div class="content">
+      <google-map
+				apiKey="AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY"
+				latitude="-34.6158527"
+				longitude="-58.4332985"
+				zoom="9"
+				disableDefaultUI>
+			</google-map>
+	  </div>
+	</core-scaffold>
 </body>
 </html>

@@ -2,10 +2,18 @@
   "name": "URBAClubes",
   "version": "1.1.0",
   "dependencies": {
-    "jquery": "*",
-    "requirejs": "*",
-    "backbone-amd": "*",
-    "underscore-amd": "*",
-    "requirejs-text": "*"
+    "polymer": "Polymer/polymer#~0.5.0",
+    "polymer-core-elements": "Polymer/core-elements",
+    "polymer-paper-elements": "Polymer/paper-elements",
+    "polymer-icon": "Polymer/core-icon",
+    "polymer-icons": "Polymer/core-icons",
+    "polymer-iconset": "Polymer/core-iconset",
+    "polymer-iconset-svg": "Polymer/core-iconset-svg",
+    "google-map": "GoogleWebComponents/google-map#master"
+  },
+  "resolutions": {
+    "core-component-page": "^0.5.0",
+    "polymer": "^0.5.0",
+    "core-shared-lib": "^0.5.0"
   }
 }

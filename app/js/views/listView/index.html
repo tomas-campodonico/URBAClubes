@@ -1,20 +1,55 @@
-<div class="list-view">
-	<div class="navbar">
-		<a id="back" href="#" data-bypass="true">Volver</a>
-		<input id="search-input" placeholder="Filtrar clubes" type="search" />
-	</div>
-	<ul class="club-list">
-		<% _.each(clubes, function(club) { %>
-			<li>
-				<div class="club-name"><%= club.get('name') %></div>
-				<div class="club-address"><%= club.get('address') %></div>
-				<% if (club.get('address') !== '') { %>
-					<a class="map" href="#map?club=<%= club.get('short_name') %>&lat=<%= club.get('lat') %>&lon=<%= club.get('lon') %>">
-						<img src="/URBAClubes/app/img/map-icon.png" />
-						<span>Mapa</span>
-					</a>
-				<% } %>
-			</li>
-		<% }); %>	
-	</ul>
-</div>
+<polymer-element name="club-list">
+	<template>
+		<style type="text/css">
+			.club-list__item {
+				border-bottom: solid 1px #3d3d3d;
+				height: 44px;
+				max-height: 44px;
+				padding: 5px;
+				font-size: 12px;
+				overflow: hidden;
+			}
+			.club-name {
+				font-weight: bold;
+				font-size: 14px;
+			}
+			.club-address {
+				height: 15px;
+				max-height: 15px;
+				white-space: nowrap;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			}
+		</style>
+		<div class="club-list-container">
+		  <template repeat="{{clubes}}">
+		    <div class="club-list__item">
+		    	<div class="club-name">{{name}}</div>
+		    	<div class="club-address">{{address}}</div>
+		    </div>
+		  </template>
+		</div>
+	</template>
+	<script>
+		Polymer({
+      ready: function() {
+      	var self = this;
+        this.getJSON(function(response) {
+        	self.clubes = JSON.parse(response);
+        });
+      },
+      getJSON: function(callback) {
+				var xhttp = new XMLHttpRequest(),
+					url = '../../../json/clubes.json';
+
+				xhttp.open('GET', url, true);
+				xhttp.send(null);
+				xhttp.onreadystatechange = function() {
+					if (xhttp.status == 200 && xhttp.readyState == 4) {
+						callback(xhttp.responseText);
+					}
+				};
+			}
+    });
+	</script>
+</polymer-element>
