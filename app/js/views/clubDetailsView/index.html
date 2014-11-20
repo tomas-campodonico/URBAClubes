@@ -4,7 +4,7 @@
 	<template>
 		<paper-action-dialog id="dialog" backdrop="true" heading="{{club.name}}">
 			<p>{{club.address || 'Dirección no disponible'}}</p>
-		  <paper-button disabled?="{{!club.address || !geoPos.geoEnabled || !geoPos.latitude}}" on-click="{{showRoute}}" affirmative autofocus role="button">Ir al club</paper-button>
+		  <paper-button disabled?="{{!club.address || !geoPos.geoEnabled || !geoPos.latitude}}" on-tap="{{showRoute}}" on-click="{{showRoute}}" affirmative autofocus role="button">Ir al club</paper-button>
 		  <paper-button affirmative role="button">Cerrar</paper-button>
 		</paper-action-dialog>
 	</template>
