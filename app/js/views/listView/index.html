@@ -11,6 +11,7 @@
 				padding: 5px;
 				font-size: 12px;
 				overflow: hidden;
+				cursor: pointer;
 			}
 			core-header-panel {
 			  height: 100%;
@@ -49,8 +50,8 @@
 	    </core-toolbar>
     	<div id="club-list-container" class="club-list-container">
 			  <template repeat="{{clubes}}">
-			    <div class="club-list__item">
-			    	<div class="club-name">{{name}}</div>
+			    <div class="club-list__item" on-click="{{showDetails}}">
+			    	<div class="club-name">{{short_name}}</div>
 			    	<div class="club-address">{{address}}</div>
 			    </div>
 			  </template>
@@ -96,6 +97,21 @@
 	          }
 	        }
 	      });
+			},
+			showDetails: function(ev) {
+				var club;
+				this.clubes.forEach(function(cl) {
+					if (cl.short_name === ev.currentTarget.querySelector('.club-name').innerHTML) {
+						club = cl;
+					}
+				});
+
+				this.fire('show-club-details', {
+					name: club.name,
+					address: club.address,
+					latitude: club.lat,
+					longitude: club.lon
+				});
 			}
     });
 	</script>

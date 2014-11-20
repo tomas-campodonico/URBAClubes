@@ -1,6 +1,6 @@
 <link rel="import" href="../../vendor/paper-dialog/paper-action-dialog.html">
 <link rel="import" href="../../vendor/paper-button/paper-button.html">
-<polymer-element name="geo-dialog">
+<polymer-element name="geo-dialog" attributes="geoEnabled latitude longitude">
 	<template>
 		<paper-action-dialog id="geoDialog" heading="Geolocalización no disponible">
 		  <p>{{message}}</p>
@@ -10,25 +10,26 @@
 	<script>
 		Polymer({
 			ready: function() {
-				this.message = 'Su navegador no soporta la geolocalización. No podrás ver las rutas en el mapa, pero sí las direcciones de los clubes';
+				this.geoEnabled = true;
+				this.message = 'Su navegador no soporta la geolocalización o usted ha denegado el acceso. No podrás ver las rutas en el mapa, pero sí las direcciones de los clubes';
 				if ('geolocation' in navigator) {
-					navigator.geolocation.getCurrentPosition(this.positionSuccess, this.positionError.bind(this), {
+					navigator.geolocation.getCurrentPosition(this.positionSuccess.bind(this), this.positionError.bind(this), {
 					  maximumAge: 30000, 
 					  timeout: 12700
 					});
 				} else {
 					this.$.geoDialog.toggle();
+					this.geoEnabled = false;
 				}
 			},
 			positionSuccess: function(position) {
-			  window.userpos = {
-			  	latitude: position.coords.latitude,
-			  	longitude: position.coords.longitude
-			  };
+			  this.latitude = position.coords.latitude;
+			  this.longitude = position.coords.longitude;
 			},
 			positionError: function() {
-			  message = 'No se pudo encontrar la posición. Revise su conexión y vuelva a intentarlo.';
+			  this.message = 'No se pudo encontrar su posición. Revise su conexión y vuelva a intentarlo.';
 			  this.$.geoDialog.toggle();
+			  this.geoEnabled = false;
 			}
     });
 	</script>

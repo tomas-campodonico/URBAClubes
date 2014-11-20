@@ -1,0 +1,36 @@
+<link rel="import" href="../../vendor/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="../../vendor/paper-button/paper-button.html">
+<polymer-element name="club-details">
+	<template>
+		<paper-action-dialog id="dialog" backdrop="true" heading="{{club.name}}">
+			<p>{{club.address || 'Dirección no disponible'}}</p>
+		  <paper-button disabled?="{{!club.address || !geoPos.geoEnabled || !geoPos.latitude}}" on-click="{{showRoute}}" affirmative autofocus role="button">Ir al club</paper-button>
+		  <paper-button affirmative role="button">Cerrar</paper-button>
+		</paper-action-dialog>
+	</template>
+	<script>
+		Polymer({
+			club: {},
+			ready: function() {
+				var self = this;
+				document.querySelector('club-list').addEventListener('show-club-details', function(ev) {
+					self.club.name = ev.detail.name;
+					self.club.address = ev.detail.address;
+					self.geoPos = document.querySelector('geo-dialog');
+					self.club.position = {
+						latitude: ev.detail.latitude,
+						longitude: ev.detail.longitude
+					};
+
+					self.$.dialog.toggle();
+				});
+			},
+			showRoute: function() {
+				document.querySelector('core-scaffold').closeDrawer();
+				document.querySelector('.show-directions').classList.remove('hidden');
+				document.querySelector('#map-directions').startAddress = new google.maps.LatLng(document.querySelector('geo-dialog').latitude, document.querySelector('geo-dialog').longitude);
+				document.querySelector('#map-directions').endAddress = new google.maps.LatLng(this.club.position.latitude, this.club.position.longitude);
+			}
+    });
+	</script>
+</polymer-element>

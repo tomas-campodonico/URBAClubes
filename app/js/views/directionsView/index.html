@@ -1,0 +1,32 @@
+<link rel="import" href="../../vendor/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="../../vendor/paper-button/paper-button.html">
+<polymer-element name="directions-view">
+	<template>
+		<style type="text/css">
+			::shadow .direction {
+				padding: .5em 0;
+				border-bottom: solid 1px #666666;
+			}
+		</style>
+		<paper-action-dialog id="dialog" backdrop="true" heading="{{directions.distance.text}} - {{directions.duration.text}}">
+			<div id="content">
+			</div>
+		  <paper-button mini affirmative role="button">Cerrar</paper-button>
+		</paper-action-dialog>
+	</template>
+	<script>
+		Polymer({
+			open: function() {
+				var self = this;
+				this.directions = document.querySelector('#map-directions').response.routes[0].legs[0];
+				this.directions.steps.forEach(function(step) {
+					var div = document.createElement('div');
+					div.classList.add('direction');
+					div.innerHTML = step.instructions;
+					self.$.content.appendChild(div);
+				});
+				this.$.dialog.open();
+			}
+    });
+	</script>
+</polymer-element>

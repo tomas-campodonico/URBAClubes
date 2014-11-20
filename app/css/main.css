@@ -33,3 +33,9 @@ google-map {
   position: relative;
   height: 100%;
 }
+
+paper-fab {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
