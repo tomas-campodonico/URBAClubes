@@ -39,3 +39,7 @@ paper-fab {
   right: 15px;
   bottom: 20px;
 }
+
+::shadow #mainContainer {
+  overflow-y: hidden;
+}

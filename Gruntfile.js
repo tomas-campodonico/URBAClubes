@@ -9,8 +9,7 @@ module.exports = function(grunt) {
         options: {
           port: 8000,
           hostname: '0.0.0.0',
-          keepalive: true,
-          base: 'app'
+          keepalive: true
         }
       }
     },
