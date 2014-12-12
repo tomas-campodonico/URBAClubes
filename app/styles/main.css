@@ -31,6 +31,16 @@ nav .toggleMenuButton {
   margin-right: 30px;
 }
 
+.toggleMenuButton span {
+  border-bottom: 13px double rgb(52, 51, 51);
+  border-top: 4px solid rgb(52, 51, 51);
+  content: "";
+  margin-top: 20px;
+  height: 23px;
+  width: 30px;
+  display: inline-block;
+}
+
 aside {
   background: rgb(255, 255, 255);
   position: fixed;
