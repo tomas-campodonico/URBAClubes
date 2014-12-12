@@ -1,0 +1,509 @@
+[
+	{
+		"shortName": "Albatros",
+		"name": "Albatros Rugby Club",
+		"address": "Calle 135 y 515 - La Plata",
+		"lat": -34.91339,
+		"lon": -58.016999
+	}, {
+		"shortName": "Areco",
+		"name": "Areco Rugby Club",
+		"address": "Ruta Nacional Nº 8 Km. 110,5 y Provincial Nº 41 de San Antonio de Areco. Pcia. de Bs. As.",
+		"lat": -34.259145,
+		"lon": -59.451434
+	}, {
+		"shortName": "Atletico del Rosario",
+		"name": "Club Atletico del Rosario",
+		"address": "Pasaje Gould Nº 865 Rosario - Pcia. de Santa Fe",
+		"lat": -32.941006,
+		"lon": -60.668336
+	}, {
+		"shortName": "CAR",
+		"name": "Club Argentino de Rugby",
+		"address": "Altura Kilómetro 43 ½ de la Ruta Nacional Nº2",
+		"lat": -34.922797,
+		"lon": -58.165532
+	}, {
+		"shortName": "Lanus",
+		"name": "Asociacion Lanus Rugby Club",
+		"address": "Gral. Ferré y Almeyda, Lanús Este - Pcia. de Buenos Aires",
+		"lat": -34.718407,
+		"lon": -58.388347
+	}, {
+		"shortName": "Alumni",
+		"name": "Asociacion Alumni",
+		"address": "Directorio 1155, Tortuguitas",
+		"lat": -34.458959,
+		"lon": -58.735469
+	}, {
+		"shortName": "AP Brandsen",
+		"name": "Atletico y Progreso C.S.D y C.",
+		"address": "Calle nº 25 entre Alberti y Saenz Peña",
+		"lat": -35.181797,
+		"lon": -58.228711
+	}, {
+		"shortName": "Banco Nacion",
+		"name": "Club Atletico Banco de la Nacion Argentina",
+		"address": "Fray Luis Beltrán, entre Guayaquil e Hiroshima, Ing. Pablo Nogués",
+		"lat": -34.47447,
+		"lon": -58.714958
+	}, {
+		"shortName": "Banco Hipotecario",
+		"name": "Club Banco Hipotecario Nacional",
+		"address": "Av. Franklin Roosevelt y Caferatta - Villa Celina (1772)",
+		"lat": -34.697722,
+		"lon": -58.477121
+	}, {
+		"shortName": "Belgrano Ath",
+		"name": "Belgrano Athletic Club",
+		"address": "Virrey del Pino 3456 - Capital Federal",
+		"lat": -34.572335,
+		"lon": -58.464247
+	}, {
+		"shortName": "Belgrano Anexo",
+		"name": "Belgrano Athletic Club Anexo",
+		"address": "Campo de Pinazo: Ruta Panamericana Kilometro 46 - Ramal Pilar",
+		"lat": -34.432589,
+		"lon": -58.825546
+	}, {
+		"shortName": "Beromama",
+		"name": "Beromama Club",
+		"address": "Dr. Equiza (Ex Cuyo) 7010 - Barrio Los Ceibos, González Catán",
+		"lat": -34.792598,
+		"lon": -58.619144
+	}, {
+		"shortName": "BACRC",
+		"name": "Buenos Aires Cricket & Rugby Club",
+		"address": "Avda Uruguay 7000 - San Fernando",
+		"lat": -34.485218,
+		"lon": -58.592224
+	}, {
+		"shortName": "Centro Naval",
+		"name": "Centro Naval",
+		"address": "Av. Cantilo y Arroyo Medrano - Capital Federal",
+		"lat": -34.537459,
+		"lon": -58.458298
+	}, {
+		"shortName": "Champagnat",
+		"name": "Club Champagnat",
+		"address": "Sede José Baca Castex - Panamericana Km 56.5 (Emprendimiento Estancias del Pilar)",
+		"lat": -34.493881,
+		"lon": -58.980518
+	}, {
+		"shortName": "Ciudad Bs As",
+		"name": "Club Ciudad de Buenos Aires",
+		"address": "Av. Libertador y Crisólogo Larralde - Capital Federal",
+		"lat": -34.544485,
+		"lon": -58.459778
+	}, {
+		"shortName": "Ciudad de Campana",
+		"name": "Ciudad de Campana",
+		"address": "Chiclana 209 - Campana",
+		"lat": -34.158027,
+		"lon": -58.966882
+	}, {
+		"shortName": "CASI",
+		"name": "Club Atletico San Isidro",
+		"address": "Roque Sáenz Peña 499, Acassuso",
+		"lat": -34.474324,
+		"lon": -58.506095
+	}, {
+		"shortName": "CASI Escobar",
+		"name": "CASI Escobar",
+		"address": "",
+		"lat": -34.361478,
+		"lon": -58.811571
+	}, {
+		"shortName": "CUBA",
+		"name": "Club Universitario de Buenos Aires",
+		"address": "Avda.Perón y Pasaje Juan Cruz Migliore",
+		"lat": -34.510557,
+		"lon": -58.686827
+	}, {
+		"shortName": "CUBA Anexo",
+		"name": "Anexo del Club Universitario de Buenos Aires",
+		"address": "Artigas y Los Cedros",
+		"lat": -34.513193,
+		"lon": -58.698345
+	}, {
+		"shortName": "Curupayti",
+		"name": "Curupayti",
+		"address": "Acassuso 2450, Hurlingham",
+		"lat": -34.590143,
+		"lon": -58.647034
+	}, {
+		"shortName": "CUQ",
+		"name": "Circulo Universitario de Quilmes",
+		"address": ""
+	}, {
+		"shortName": "DAOM",
+		"name": "Club DAOM",
+		"address": "Varela 1802, esquina Castañares - Capital Federal",
+		"lat": -34.647216,
+		"lon": -58.449127
+	}, {
+		"shortName": "DAOM Anexo",
+		"name": "DAOM Anexo", 
+		"address": "Ana María Janner y Av. Lafuente - Capital Federal",
+		"lat": -34.657038,
+		"lon": -58.446633
+	}, {
+		"shortName": "Dep. Francesa",
+		"name": "Asociacion Deportiva Francesa",
+		"address": "Ruta Panamericana, Acceso a Pilar Km. 42,5 Del Viso",
+		"lat": -34.437265,
+		"lon": -58.791712
+	}, {
+		"shortName": "Don Bosco",
+		"name": "Ateneo Cultural y Deportivo Don Bosco",
+		"address": "Ruta Provincial 53, Km. 13,500 - Florencia Varela",
+		"lat": -34.919296,
+		"lon": -58.267327
+	}, {
+		"shortName": "El Retiro",
+		"name": "El Retiro Rugby",
+		"address": "Solis Garay y Camino del Buen Ayre, vías ferrocarril Gral. San Martín - Hurlingham",
+		"lat": -34.575123,
+		"lon": -58.660702
+	}, {
+		"shortName": "GEBA",
+		"name": "Club de Gimnasia y Esgrima Bs. As.",
+		"address": "Sección San Martín: Av. Figueroa Alcorta 5575 - Capital Federal",
+		"lat": -34.560876,
+		"lon": -58.422584
+	}, {
+		"shortName": "GEBA Anexo",
+		"name": "GEBA Anexo",
+		"address": "Sección Jorge Newbery: Av. Coronel M. A. Freire y Av. Dorrego - Capital Federal",
+		"lat": -34.569031,
+		"lon": -58.420781
+	}, {
+		"shortName": "GEI",
+		"name": "Club Gimnasia y Esgrima de Ituzaingo",
+		"address": "Grecia 2640 entre Almagro y Portugal - Ituzaingó",
+		"lat": -34.652022,
+		"lon": -58.698103
+	}, {
+		"shortName": "Hindu",
+		"name": "Hindu Club",
+		"address": "Ruta 202 y Av. Del Golf - Don Torcuato",
+		"lat": -34.497471,
+		"lon": -58.642581
+	}, {
+		"shortName": "Hurling",
+		"name": "Hurling Club",
+		"address": "Coronel José de San Martín 5415 ex Avda. Vergara- Hurlingham",
+		"lat": -34.574393,
+		"lon": -58.644027
+	}, {
+		"shortName": "Italiano",
+		"name": "Club Italiano",
+		"address": "Av. Riestra 2770 - Capital Federal",
+		"lat": -34.653014,
+		"lon": -58.446971
+	}, {
+		"shortName": "La Plata",
+		"name": "La Plata Rugby Club",
+		"address": "Camino Centenario - Gonnet",
+		"lat": -34.878675,
+		"lon": -58.018606
+	}, {
+		"shortName": "La Salle",
+		"name": "Club Asosiacion de ex-alumnos del colegio de La Salle",
+		"address": "Suipacha y La Crujía -Partido de San Martín",
+		"lat": -34.577953,
+		"lon": -58.556748
+	}, {
+		"shortName": "Las Cañas",
+		"name": "Las Cañas Rugby Club",
+		"address": "Carlos Pellegrini y Santa Cruz - Cañuelas",
+		"lat": -35.059105,
+		"lon": -58.741981
+	}, {
+		"shortName": "Liceo Militar",
+		"name": "Liceo Militar Gral. San Martin",
+		"address": "Av. J.M.de Rosas-Ex-Marquez 6156(Camino de Cintura) y Triunvirato, Loma Hermosa, San Martín",
+		"lat": -34.567882,
+		"lon": -58.589761
+	}, {
+		"shortName": "Liceo Naval",
+		"name": "Liceo Naval",
+		"address": "Av. Cantilo y Udaondo s/n. - Capital Federal.",
+		"lat": -34.540283,
+		"lon": -58.451758
+	}, {
+		"shortName": "Lomas",
+		"name": "Club Atletico Lomas",
+		"address": "Arenales 663 - Lomas de Zamora",
+		"lat": -34.75417, 
+		"lon": -58.388861
+	}, {
+		"shortName": "Lomas Anexo",
+		"name": "Club Atletico Lomas Anexo",
+		"address": "Canalejas y Torquinst - lonchamps",
+		"lat": -34.857856,
+		"lon": -58.373647
+	}, {
+		"shortName": "Los Cedros",
+		"name": "Club Los Cedros",
+		"address": "Ruta 202 y El Centinela - San Miguel",
+		"lat": -34.528225,
+		"lon": -58.686149
+	}, {
+		"shortName": "Los Matreros",
+		"name": "Los Matreros Rugby Club",
+		"address": "Sarmiento 1371 - Morón",
+		"lat": -34.647994,
+		"lon": -58.627025
+	}, {
+		"shortName": "Anexo Los Matreras",
+		"name": "Anexo de Los Matreros Rugby Club",
+		"address": "Gral. Pintos y Ricardo Gutiérrez - Villa Malaver",
+		"lat": -34.599348,
+		"lon": -58.766776
+	}, {
+		"shortName": "Los Pinos",
+		"name": "Club Los Pinos",
+		"address": "Joaquín V. González (Ex. J. B. Justo) Nº 250 - La Lonja - Partido de Pilar",
+		"lat": -34.449136,
+		"lon": -58.824591
+	}, {
+		"shortName": "Los Tilos",
+		"name": "Los Tilos Club de Rugby",
+		"address": "Calle 21 y 522 - La Plata",
+		"lat": -34.905272,
+		"lon": -57.994664
+	}, {
+		"shortName": "Lujan",
+		"name": "Lujan Rugby Club",
+		"address": "Dr. Real entre Francia y Rivadavia - Luján",
+		"lat": -34.56018, 
+		"lon": 59.116388
+	}, {
+		"shortName": "Manuel Belgrano",
+		"name": "Club Manuel Belgrano",
+		"address": "Benito Lynch. S/Nº - Carupa - Partido de Tigre",
+		"lat": -34.437323,
+		"lon": -58.591684
+	}, {
+		"shortName": "Manuel Belgrano Anexo",
+		"name": "Club Manuel Belgrano Anexo",
+		"address": "Crisólogo Larralde 5255 - Capital Federal",
+		"lat": -34.562642,
+		"lon": -58.494903
+	}, {
+		"shortName": "M. Belgrano - Sede Maschwitz",
+		"name": "Club Manuel Belgrano Maschwitz",
+		"address": "La Pista 1601, esq. Lago Puelo - Maschwitz",
+		"lat": -34.363699,
+		"lon": -58.736561
+	}, {
+		"shortName": "Mariano Moreno",
+		"name": "Club y Biblioteca Mariano Moreno",
+		"address": "Padre Fahy y San Luis - Moreno",
+		"lat": -34.663734,
+		"lon": -58.825578
+	}, {
+		"shortName": "Monte Grande",
+		"name": "Monte Grande Rugby Club",
+		"address": "P. Dreyer 3302 - Monte Grande",
+		"lat": -34.848688,
+		"lon": -58.493223
+	}, {
+		"shortName": "Vicente Lopez",
+		"name": "Club Municipalidad de la Ciudad de Vicente Lopez",
+		"address": "Bme. Cruz 1175 -Vicente López",
+		"lat": -34.523332,
+		"lon": -58.47136
+	}, {
+		"shortName": "Nautico Arsenal Zarate",
+		"name": "Nautico Arsenal Zarate Club",
+		"address": "Av. Rivadavia (esquina Crucero Gral. Belgrano 106) - Zarate",
+		"lat": -34.092279,
+		"lon": -59.018807
+	}, {
+		"shortName": "Newman",
+		"name": "Club Newman",
+		"address": "Avda. de los Constituyentes 7245 Ruta 9 Km. 39,5, Benavidez",
+		"lat": -34.411078,
+		"lon": -58.71296
+	}, {
+		"shortName": "Newman Anexo",
+		"name": "Club Newman Anexo",
+		"address": "Carlos Gardel entre Reclus y Blanco Encalada, Boulogne",
+		"lat": -34.488226,
+		"lon": -58.56167
+	}, {
+		"shortName": "Obras",
+		"name": "Club Atletico Obras Sanitarias de la Nacion",
+		"address": "Ruta 21 y Cristianía, Laferrere, Pdo. de La Matanza",
+		"lat": -34.733557,
+		"lon": -58.553106
+	}, {
+		"shortName": "Olivos",
+		"name": "Rugby Club Olivos",
+		"address": "Mariano Pelliza 4550. Munro",
+		"lat": -34.521271,
+		"lon": -58.520696
+	}, {
+		"shortName": "Porteño",
+		"name": "Club Atletico Porteño",
+		"address": "Magallanes y Pardo - San Vicente", 
+		"lat": -35.01333,
+		"lon": -58.445039
+	}, {
+		"shortName": "Pucara",
+		"name": "Club Pucara",
+		"address": "Falucho 766. Burzaco",
+		"lat": -34.815987,
+		"lon": -58.386028
+	}, {
+		"shortName": "Pueyrredon",
+		"name": "Pueyrredon Club de Rugby",
+		"address": "Cap. Juan de San Martín Nº 1391. Boulogne - San Isidro",
+		"lat": -34.493449,
+		"lon": -58.572715
+	}, {
+		"shortName": "Pueyrredon Anexo",
+		"name": "Anexo de Pueyrredon Club de Rugby",
+		"address": "Ruta Panamericana (Ramal a Garín) km. 38 - Benavidez",
+		"lat": -34.394725,
+		"lon": -58.66265
+	}, {
+		"shortName": "Regatas BV",
+		"name": "Club de Regatas Bella Vista",
+		"address": "Av. Francia 1956 Bella Vista",
+		"lat": -34.570044,
+		"lon": -58.678719,
+		"stops": [{
+			"location":{"lat": -34.567128, "lon": -58.686272},
+			"stopover": false
+		}]
+	}, {
+		"shortName": "San Albano",
+		"name": "Asociacion de ex-alumnos del Colegio San Albano",
+		"address": "Av. Espora 4920 (Ruta 210), Burzaco",
+		"lat": -34.839782,
+		"lon": -58.381168
+	}, {
+		"shortName": "San Andres",
+		"name": "Asociacion de ex-alumnos San Andres",
+		"address": "Italia 1600 y Rivadavia - Benavidez",
+		"lat": -34.381523,
+		"lon": -58.686816
+	}, {
+		"shortName": "San Andres Anexo",
+		"name": "Anexo de Asociacion de ex-alumnos San Andres",
+		"address": "Lasalle y 33 Orientales - Beccar"
+	}, {
+		"shortName": "San Antonio de Padua",
+		"name": "Club Atletico San Antonio de Padua",
+		"address": "Antezana y Piedrabuena, Merlo Norte",
+		"lat": -34.646729,
+		"lon": -58.728389
+	}, {
+		"shortName": "San Carlos",
+		"name": "Club San Carlos",
+		"address": "Alejandro Vitale S/N Altura Ruta 197 (Km. 12,500) Pablo Nogués",
+		"lat": -34.476000,
+		"lon": -58.682755
+	}, {
+		"shortName": "San Cirano",
+		"name": "Club San Cirano",
+		"address": "Cnel. Domínguez 2897 Villa Celina",
+		"lat": -34.697865,
+		"lon": -58.482319
+	}, {
+		"shortName": "San Fernando",
+		"name": "Club San Fernando",
+		"address": "Sarmiento y Escalada, San Fernando",
+		"lat": -34.436685,
+		"lon": -58.554413
+	}, {
+		"shortName": "SIC",
+		"name": "San Isidro Club",
+		"address": "Av. Blanco Encalada 404 - San Isidro",
+		"lat": -34.492407,
+		"lon": -58.556835
+	}, {
+		"shortName": "SIC Anexo",
+		"name": "San Isidro Club Anexo",
+		"address": "Camino Real - Morón - San Fernando 1998 - Boulogne Sur",
+		"lat": -34.486846,
+		"lon": -58.561308
+	}, {
+		"shortName": "San Jose",
+		"name": "Club San Jose",
+		"address": "Centenario 210 - Garín",
+		"lat": -34.448727,
+		"lon": -58.726169
+	}, {
+		"shortName": "San Luis",
+		"name": "Club San Luis",
+		"address": "Calle 520 e/ 27 y 29 - La Plata",
+		"lat": -34.910240,
+		"lon": -58.003950
+	}, {
+		"shortName": "San Marcos",
+		"name": "Club San Marcos de Monte Grande",
+		"address": "Faro Patagonia y Neuquén - Monte Grande",
+		"lat": -34.846167,
+		"lon": -58.471796
+	}, {
+		"shortName": "San Martin",
+		"name": "Club Atletico Ferrocarril General San Martin",
+		"address": "Lope de Vega y Colón - Saenz Peña",
+		"lat": -34.607963,
+		"lon": -58.533353
+	}, {
+		"shortName": "San Miguel",
+		"name": "San Miguel Rugby y Hockey Club",
+		"address": "Pardo 5200 - San Miguel",
+		"lat": -34.584283,
+		"lon": -58.729344
+	}, {
+		"shortName": "San Patricio",
+		"name": "Club San Patricio",
+		"address": "Caamaño 924, La Lonja - Pilar",
+		"lat": -34.432794,
+		"lon": -58.832332
+	}, {
+		"shortName": "Sociedad Hebraica",
+		"name": "Sociedad Hebraica Argentina",
+		"address": "Ruta 8 Km. 51,5 -Pilar",
+		"lat": -34.453644,
+		"lon": -58.882279
+	}, {
+		"shortName": "SITAS",
+		"name": "Sociedad Italiana de Tiro Al Segno",
+		"address": "Tte. Gral. Bergamini y Formosa - El Palomar",
+		"lat": -34.617906,
+		"lon": -58.591503
+	}, {
+		"shortName": "St. Brendan\"s",
+		"name": "St Brendan\"s Rugby Club",
+		"address": "Barrio San José de los Talas - Pilar",
+		"lat": -34.424427,
+		"lon": -58.945791
+	}, {
+		"shortName": "Tigre",
+		"name": "Tigre Rugby Club",
+		"address": "Benito Lynch 1060 - Tigre",
+		"lat": -34.437350,
+		"lon": -58.591625
+	}, {
+		"shortName": "Universitario de La Plata",
+		"name": "Club Universitario de La Plata",
+		"address": "Calle 496 - Gonnet",
+		"lat": -34.879749,
+		"lon": -58.018179
+	}, {
+		"shortName": "Varela",
+		"name": "Club Varela Junior",
+		"address": ""
+	}, {
+		"shortName": "Virreyes",
+		"name": "Virreyes Rugby Club",
+		"address": ""
+	}
+]
