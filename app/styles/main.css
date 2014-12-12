@@ -12,6 +12,7 @@ nav {
   position: fixed;
   width: 100%;
   padding: 0 15px;
+  z-index: 5;
 }
 
 nav h1 {
@@ -122,4 +123,63 @@ aside.opened ~ .backshadow {
     opacity: 0;
     transform: scale(2.5);
   }
+}
+
+main {
+  position: fixed;
+  height: calc(100% - 60px);
+  width: 100%;
+  margin-top: 60px;
+}
+
+div#map-canvas {
+  height: 100%;
+}
+
+.alert {
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+  box-shadow: 0px 0px 5px rgb(10, 10, 10);
+  border-radius: 0;
+}
+
+.instructionsButton {
+  z-index: 10;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: #d23f31;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 1px 1px 5px #333;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+.instructionsModal {
+  width: 40%;
+  height: 70%;
+  z-index: 50;
+  position: fixed;
+  margin: 10% 30%;
+  background: #fff;
+  box-shadow: 2px 2px 10px #333;
+}
+
+.instructionsModal.opened ~ .backshadow {
+  height: 100%;
+  width: 100%;
+}
+
+.instructions {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 5px;
 }

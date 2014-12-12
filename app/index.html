@@ -31,7 +31,19 @@
       </div>
       <ul class="clubList"></ul>
     </aside>
+    <div class="instructionsModal hidden">
+      <div class="instructions"></div>
+    </div>
     <div class="backshadow"></div>
+    <main>
+      <div id="map-canvas"></div>
+      <a class="instructionsButton hidden">
+        <span class="glyphicon glyphicon-road"></span>
+      </a>
+      <div class="noGeolocationAlert alert alert-danger hidden" role="alert">
+        La aplicación no es soportada por su navegador o el usuario no ha concedido permisos de ubicación. 
+      </div>
+    </main>
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -39,6 +51,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY&sensor=false"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
