@@ -21,6 +21,7 @@ $(document).ready(function() {
 		} else {
 			$('aside').toggleClass('opened');
 			$('.searchBox input').val('');
+			filterList();
 		}
 	}
 
@@ -59,13 +60,33 @@ $(document).ready(function() {
     return deferred.promise();
   }
 
+  //Show alert
+  function showAlert(text, timeout) {
+  	$('.alert').text(text);
+  	$('.alert').removeClass('hidden');
+
+  	if (typeof timeout !== 'number') {
+  		timeout = 10000; //Default 10 seconds
+  	}
+
+  	setTimeout(function() {
+  		hideAlert();
+  	}, timeout);
+  }
+
+  //hide alert
+  function hideAlert() {
+  	$('.alert').addClass('hidden');
+  }
+
   //Show route in map
 	function showRouteInMap(request) {
     directionsService.route(request, function(result, status) {
       if (status === google.maps.DirectionsStatus.OK) {
-        //_showResults(result);
         directionsDisplay.setDirections(result);
         $('.instructionsButton').removeClass('hidden');
+      } else {
+      	showAlert('Hubo un problema. Compruebe su conexión a internet y vuelva a intentarlo.', 15000);
       }
     });
   }
@@ -74,7 +95,7 @@ $(document).ready(function() {
 	function calcRoute(club) {
 		if (navigator.geolocation) {
       $.when(dfd).done(function(pos) {
-      	console.dir(pos);
+      	$('.loadingMask').addClass('hidden');
         showRouteInMap({
           origin: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
           destination: new google.maps.LatLng(club.lat, club.lon),
@@ -82,22 +103,12 @@ $(document).ready(function() {
         });
       });
     } else {
-    	$('.noGeolocationAlert').removeClass('hidden');
-    	setTimeout(function() {
-    		$('.noGeolocationAlert').addClass('hidden');
-    	}, 6000);
+    	showAlert('La aplicación no es soportada por su navegador o el usuario no ha concedido permisos de ubicación.', 6000);
     }
   }
 
-  /* -------------------------- HANDLERS ------------------------------- */
-	$('.toggleMenuButton').on('click', toggleMenu);
-	$('.backshadow').on('click', toggleMenu);
-	$('.instructionsButton').on('click', function(ev) {
-		rippleEffect.call(ev.currentTarget, ev);
-		$('.instructionsModal').removeClass('hidden');
-		$('.instructionsModal').addClass('opened');
-	});
-	$('.searchBox input').on('keyup', function() {
+  //Filter list by club name
+  function filterList() {
 		var searchText = $('.searchBox input').val().toLowerCase();
 
 		$('.clubList li').each(function(index, item) {
@@ -107,7 +118,17 @@ $(document).ready(function() {
 				$(item).addClass('hidden');
 			}
 		});
+	}
+
+  /* -------------------------- HANDLERS ------------------------------- */
+	$('.toggleMenuButton').on('click', toggleMenu);
+	$('.backshadow').on('click', toggleMenu);
+	$('.instructionsButton').on('click', function(ev) {
+		rippleEffect.call(ev.currentTarget, ev);
+		$('.instructionsModal').removeClass('hidden');
+		$('.instructionsModal').addClass('opened');
 	});
+	$('.searchBox input').on('keyup', filterList);
 
 
 	/* -------------------------- INIT ------------------------------------ */
@@ -130,6 +151,7 @@ $(document).ready(function() {
 	  $('.clubList li').on('click', function(ev) {
 	  	rippleEffect.call(ev.currentTarget, ev);
 	  	toggleMenu();
+	  	$('.loadingMask').removeClass('hidden');
 	  	calcRoute({
 	  		name: $(ev.currentTarget).text(),
 	  		lat: ev.currentTarget.dataset.lat,
