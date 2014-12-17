@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# rev 3 - 2014-12-17T00:44:30.958Z
+
+CACHE:
+50c31ded.favicon.png
+clubes.json
+fonts/glyphicons-halflings-regular.eot
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.woff
+index.html
+offline.html
+robots.txt
+scripts/db02b173.vendor.js
+scripts/f139ae15.main.js
+styles/6a055064.main.css
+styles/9c307a9d.vendor.css
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html
