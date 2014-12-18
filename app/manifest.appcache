@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# rev 3 - 2014-12-18T22:26:32.566Z
+
+CACHE:
+../app/clubes.json
+../app/favicon.png
+../app/index.html
+../app/offline.html
+../app/robots.txt
+../app/scripts/main.js
+../app/styles/main.css
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html

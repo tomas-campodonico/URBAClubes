@@ -1,11 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" manifest="manifest.appcache">
   <head>
     <meta charset="utf-8">
     <title>URBAClubes 3 1 0</title>
     <meta name="description" content="Direcciones de los clubes de la URBA">
     <meta name="author" content="Tomas Campodonico">
-    <meta http-equiv="expires" content="Mon, 31 Dec 2025 11:12:01 GMT">
+    <meta http-equiv="expires" content="Mon, 31 Dec 2015 11:12:01 GMT">
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="content-language" content="es-AR">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
@@ -21,11 +24,11 @@
     <!-- endbuild -->
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="/favicon.png">
-    <link rel="icon" sizes="128x128" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="favicon.png">
+    <link rel="icon" sizes="128x128" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="favicon.png">
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -61,20 +64,10 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY&sensor=false"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY"></script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script async src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 </html>

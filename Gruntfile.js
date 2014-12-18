@@ -30,10 +30,6 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['jshint'],
@@ -160,15 +156,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Automatically inject Bower components into the HTML file
-    wiredep: {
-      app: {
-        ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
-      }
-    },
-
     // Renames files for browser caching purposes
     rev: {
       dist: {
@@ -252,6 +239,34 @@ module.exports = function (grunt) {
       }
     },
 
+    appcache: {
+      options: {
+        basePath: '<%= config.dist %>'
+      },
+      dist: {
+        dest: '<%= config.dist %>/manifest.appcache',
+        cache: {
+          patterns: [
+            '<%= config.dist %>/**/*'
+          ]
+        },
+        literals: '/' ,
+        network: '*',
+        fallback: '/ /offline.html'
+      },
+      dev: {
+        dest: '<%= config.app %>/manifest.appcache',
+        cache: {
+          patterns: [
+            '<%= config.app %>/**/*'
+          ]
+        },
+        literals: '/' ,
+        network: '*',
+        fallback: '/ /offline.html'
+      }
+    },
+
     // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
@@ -287,7 +302,7 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,json,appcache}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
@@ -339,9 +354,9 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'appcache:dev',
       'connect:livereload',
       'watch'
     ]);
@@ -369,7 +384,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
@@ -379,7 +393,8 @@ module.exports = function (grunt) {
     'copy:dist',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'appcache:dist'
   ]);
 
   grunt.registerTask('default', [

@@ -1,3 +1,4 @@
+/*global google:false */
 'use strict';
 
 $(document).ready(function() {
@@ -27,6 +28,7 @@ $(document).ready(function() {
 
 	//Show ripple effect
 	function rippleEffect(ev) {
+		/*jshint validthis: true */
 		var ink, d, x, y;
 
 		//create .ink element if it doesn't exist
