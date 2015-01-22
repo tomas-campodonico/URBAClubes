@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 3 - 2014-12-18T22:26:32.566Z
+# rev 6 - 2015-01-22T16:30:17.876Z
 
 CACHE:
 ../app/clubes.json
@@ -8,7 +8,9 @@ CACHE:
 ../app/offline.html
 ../app/robots.txt
 ../app/scripts/main.js
+../app/scripts/pace.js
 ../app/styles/main.css
+../app/styles/pace.css
 
 NETWORK:
 *
