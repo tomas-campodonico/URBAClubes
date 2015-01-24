@@ -2,6 +2,7 @@
   "name": "urbaclubes-3-1-0",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "pace": "latest"
   }
 }
