@@ -20,4 +20,4 @@ NETWORK:
 *
 
 FALLBACK:
-/ /offline.html
+*.html offline.html
