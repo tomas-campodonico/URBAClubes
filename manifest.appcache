@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 9 - 2015-01-24T02:00:33.456Z
+# rev 13 - 2015-03-09T21:24:56.763Z
 
 CACHE:
 50c31ded.favicon.png
@@ -11,13 +11,13 @@ fonts/glyphicons-halflings-regular.woff
 index.html
 offline.html
 robots.txt
-scripts/7e1f0d91.vendor.js
-scripts/f139ae15.main.js
-styles/5ff6f3a9.main.css
-styles/f033f55d.vendor.css
+scripts/436707b7.main.js
+scripts/ae6fadb7.vendor.js
+styles/55eba361.vendor.css
+styles/5e8a2a4c.main.css
 
 NETWORK:
 *
 
 FALLBACK:
-*.html offline.html
+/ /URBAClubes/offline.html
