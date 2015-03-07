@@ -10,7 +10,14 @@ $(document).ready(function() {
   	directionsService = new google.maps.DirectionsService(),
   	directionsDisplay = new google.maps.DirectionsRenderer(),
   	map = new google.maps.Map($('#map-canvas')[0], mapOpts),
-  	dfd;
+  	dfd,
+  	slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'duration': 100,
+      'tolerance': 20
+    });
 
 	/* -------------- FUNCTIONS -------------------- */
 
@@ -20,7 +27,7 @@ $(document).ready(function() {
 			$('.instructionsModal').removeClass('opened');
 			$('.instructionsModal').addClass('hidden');
 		} else {
-			$('aside').toggleClass('opened');
+			slideout.toggle();
 			$('.searchBox input').val('');
 			filterList();
 		}

@@ -18,6 +18,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/pace/themes/yellow/pace-theme-flash.css">
+    <link rel="stylesheet" href="bower_components/slideout/index.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -36,11 +37,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav>
-      <a class="toggleMenuButton"><span></span></a>
-      <h1>URBA Clubes</h1>
-    </nav>
-    <aside>
+    <aside id="menu">
       <div class="searchBox">
         <input type="text" placeholder="Buscar..." />
       </div>
@@ -50,7 +47,11 @@
       <div class="instructions"></div>
     </div>
     <div class="backshadow"></div>
-    <main>
+    <main id="panel">
+      <nav>
+        <a class="toggleMenuButton"><span></span></a>
+        <h1>URBA Clubes</h1>
+      </nav>
       <div id="map-canvas"></div>
       <a class="instructionsButton hidden">
         <span class="glyphicon glyphicon-road"></span>
@@ -64,6 +65,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/pace/pace.min.js"></script>
+    <script src="bower_components/slideout/dist/slideout.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyIONBoivZKIXXpSS06KneRlRfwFSZheY"></script>
